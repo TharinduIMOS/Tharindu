@@ -1,0 +1,102 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fillWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--target-width);
+  }
+}
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 1s ease forwards;
+}
+.animate-scaleIn {
+  animation: scaleIn 1s ease forwards;
+}
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 1s ease forwards;
+}
+.animate-slideInFromRight {
+  animation: slideInFromRight 1s ease forwards;
+}
+.animate-fillWidth {
+  animation: fillWidth 1.5s ease forwards;
+}
+/* Hover effect for project cards */
+.project-card {
+  transition: all 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
